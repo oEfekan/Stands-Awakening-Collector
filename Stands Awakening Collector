@@ -1,0 +1,117 @@
+--This script made for Stands Awakening Game!
+
+--Thanks For Using The Script!
+--You can Subscribe to Support Me !
+--Made by EfekansYT
+--Channel = Efekan SRP
+
+--The item you will collect must be spawned!
+
+--KeyBinds--
+
+-- K = Collect Banknote
+-- J = Collect Frog
+-- L = Collect Requiem Arrow
+-- U = Collect Vampire Mask
+-- O = Collect Dio's Diary
+
+
+ws = game:GetService("Workspace")
+
+uis = game:GetService("UserInputService")
+
+getgenv().fbank = false
+
+uis.InputBegan:Connect(function(input,gameProccesedEvent)
+    if input.KeyCode == Enum.KeyCode.K then
+
+        banknote()
+
+    
+    end
+
+end)
+
+
+uis.InputBegan:Connect(function(input,gameProccesedEvent)
+    if input.KeyCode == Enum.KeyCode.J then
+
+        frog()
+
+    
+    end
+
+end)
+
+
+uis.InputBegan:Connect(function(input,gameProccesedEvent)
+    if input.KeyCode == Enum.KeyCode.L then
+
+        requiem()
+
+    
+    end
+
+end)
+
+
+uis.InputBegan:Connect(function(input,gameProccesedEvent)
+    if input.KeyCode == Enum.KeyCode.U then
+
+        vamp()
+
+    
+    end
+
+end)
+
+uis.InputBegan:Connect(function(input,gameProccesedEvent)
+    if input.KeyCode == Enum.KeyCode.O then
+
+        dio()
+
+    
+    end
+
+end)
+
+
+function banknote()
+
+  local cbank = game.Workspace.Banknote.Handle.Position
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(cbank)
+
+end
+
+function frog()
+
+  local cfrog = game.Workspace.Frog.Handle.Position
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(cfrog)
+
+end
+
+
+function requiem()
+
+    local creq = ws:FindFirstChild("Requiem Arrow").Handle.Position
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(creq)
+end
+
+
+function vamp()
+
+    local cvamp = ws:FindFirstChild("Vampire Mask").Handle.Position
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(cvamp)
+
+
+end
+
+
+function dio()
+
+    local cdio = ws:FindFirstChild("DIO's Diary").Handle.Position
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(cdio)
+
+end
+
+
